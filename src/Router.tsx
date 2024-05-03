@@ -6,6 +6,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <HomePage />,
   },
+  {
+    path: '/books-ui/',
+    element: <HomePage />,
+  },
 ]);
 
 export function Router() {
