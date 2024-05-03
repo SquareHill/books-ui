@@ -91,25 +91,26 @@ const Result = ({ book }: { book: Book }) => {
             flexWrap: 'flex',
           }}
         >
-          {book.author_name.slice(0, 3).map((author, idx) => (
-            <Group gap="sm">
-              <Avatar
-                key={author}
-                size="sm"
-                src={
-                  idx === 0
-                    ? `https://covers.openlibrary.org/a/olid/${book.author_key?.[0]}-S.jpg`
-                    : undefined
-                }
-              />
-              <Text size="xs">{author}</Text>
-            </Group>
-          ))}
+          {!!book.author_name &&
+            book.author_name.slice(0, 3).map((author, idx) => (
+              <Group gap="sm">
+                <Avatar
+                  key={author}
+                  size="sm"
+                  src={
+                    idx === 0
+                      ? `https://covers.openlibrary.org/a/olid/${book.author_key?.[0]}-S.jpg`
+                      : undefined
+                  }
+                />
+                <Text size="xs">{author}</Text>
+              </Group>
+            ))}
         </div>
         <div style={{ marginTop: '20px' }}>
           <Text size="xs">{book.number_of_pages_median} pages</Text>
           <div style={{ marginTop: '8px' }}>
-            {book.subject && (
+            {!!book.subject && (
               <div style={{ display: 'flex', gap: '5px', flexWrap: 'wrap' }}>
                 {book.subject.slice(0, 5).map((subject) => (
                   <Badge key={subject} color="gray">

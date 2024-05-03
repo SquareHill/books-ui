@@ -9,7 +9,7 @@ export function HomePage() {
         margin: 'auto',
         display: 'grid',
         gap: '10px',
-        padding: '50px 0px',
+        padding: '50px 15px',
       }}
     >
       <Title>
