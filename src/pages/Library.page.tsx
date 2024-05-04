@@ -1,7 +1,7 @@
 import { Title, Text } from '@mantine/core';
-import Search from '@/components/search/Search';
+import { Books } from '@/components/library/Books';
 
-export function HomePage() {
+export function Library() {
   return (
     <div
       style={{
@@ -9,21 +9,20 @@ export function HomePage() {
         margin: 'auto',
         display: 'grid',
         gap: '10px',
-        padding: '50px 15px',
       }}
     >
       <Title>
-        Welcome,{' '}
+        My{' '}
         <Text
           inherit
           component={'span'}
           variant="gradient"
           gradient={{ from: 'indigo', to: 'grape', deg: 28 }}
         >
-          Book Liker
+          Library
         </Text>
       </Title>
-      <Search />
+      <Books />
     </div>
   );
 }

@@ -1,0 +1,20 @@
+.footer-nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}
+
+.footer-nav-item:active,
+.footer-nav-item:focus,
+.footer-nav-item:hover,
+.footer-nav-item:visited {
+  background-color: transparent;
+}
+
+.footer-nav-item.active {
+  color: var(--mantine-primary-color-filled);
+}
