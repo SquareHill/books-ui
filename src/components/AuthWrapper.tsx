@@ -5,6 +5,7 @@ const AuthWrapper = ({ children }) => {
     <div
       style={{
         maxWidth: 600,
+        margin: 'auto',
         display: 'grid',
         alignItems: 'center',
         gap: '10px',
